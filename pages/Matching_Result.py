@@ -75,34 +75,16 @@ result = get_matching_result(
 # 최종 유형
 # =========================================
 
-st.markdown(
-    f"""
-    <div style="
-        text-align: center;
-        padding: 40px 0 20px 0;
-    ">
+st.title(
+    f"{result['emoji']} {result['type']}"
+)
 
-        <div style="
-            font-size: 64px;
-        ">
-            {result["emoji"]}
-        </div>
+st.subheader(
+    result["title"]
+)
 
-        <h1>
-            {result["type"]}
-        </h1>
-
-        <p style="
-            font-size: 18px;
-            color: #666;
-        ">
-            {result["desc"]}
-        </p>
-
-    </div>
-    """,
-
-    unsafe_allow_html=True
+st.write(
+    result["desc"]
 )
 
 
