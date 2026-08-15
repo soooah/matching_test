@@ -75,12 +75,8 @@ result = get_matching_result(
 # 최종 유형
 # =========================================
 
-st.title(
-    f"{result['emoji']} {result['type']}"
-)
-
-st.subheader(
-    result["title"]
+st.markdown(
+    f"# {result['emoji']} {result['type']}"
 )
 
 st.write(
